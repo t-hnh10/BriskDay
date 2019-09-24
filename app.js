@@ -1,3 +1,12 @@
+const level = document.getElementById("weather");
+let searchBar = document.createElement("input");
+searchBar.className = "search";
+searchBar.setAttribute("type", "text");
+level.appendChild(searchBar);
+let button = document.createElement("button");
+button.className = "button";
+level.appendChild(button);
+
 // Creating a clock with JavaScript
 
 function updateClock() {
@@ -25,3 +34,18 @@ function updateClock() {
 
         document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 }
+
+const apiKey = '4a43e69ef8adee6b15a775082d129647';
+const locations = fetch('cityList.json');
+
+function getCityId(city) {
+  locations.then(function(response) {
+    return response.json();
+  }).then(function(cities) {
+    console.log(`location 1: ${cities[0].id} ${cities[0].name} 
+    `);
+  });
+}
+
+
+
