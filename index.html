@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
     <head>
         <title>BriskDay</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.scss">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
-    <body>
-    <section class="section">
-        <img src="img/logo.png" style="width: 250px;">
+    <body onload="updateClock(); setInterval('updateClock()', 10000)">
+    <section class="container section">
+        <div class="level">
+            <img src="img/logo.png" class="logo level-left">
+            <!-- &nbsp; creates a child text node for the span in the DOM -->
+            <span id="clock" class="level-right">&nbsp;</span>
+        </div>
+        <div class="level">
+            <!-- WEATHER WIDGET GOES HERE -->
+        </div>
     </section>
         <script src="app.js"></script>
     </body>
