@@ -15,11 +15,16 @@
             <!-- &nbsp; creates a child text node for the span in the DOM -->
             <span id="clock" class="level-right">&nbsp;</span>
         </div>
-        <div class="level">
-            <!-- WEATHER WIDGET GOES HERE -->
-        </div>
-        <div class="level">
-            <!-- NEWS WIDGET GOES HERE -->
+        <div class="columns">
+            <div class="column">
+                <!-- WEATHER WIDGET GOES HERE -->
+            </div>
+            <div class="column">
+                <h1 class="title has-text-right">Latest Headlines 📣📰</h1>
+                <div class="box">
+                    <p id="gallery" class="gallery"></p>
+                </div>
+            </div>
         </div>
     </section>
         <script src="app.js"></script>
