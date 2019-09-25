@@ -1,12 +1,12 @@
 const weather = document.getElementById("weather");
 let searchBar = document.createElement("input");
-searchBar.className = "search";
+searchBar.className = "search input";
 searchBar.setAttribute("id", "location");
 searchBar.setAttribute("placeholder", "Please add a city e.g. London UK");
 searchBar.setAttribute("type", "text");
 weather.appendChild(searchBar);
 let button = document.createElement("button");
-button.className = "button";
+button.className = "button is-primary";
 button.innerHTML = "Submit";
 weather.appendChild(button);
 let weatherContent = document.createElement("div");
@@ -130,6 +130,7 @@ function showWeather(day) {
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
+  document.getElementById("weatherContent").innerHTML = "";
   let location = document.getElementById("location").value.split(" ");
   let cityName = toCapitalize(location[0].toLowerCase());
   let country = location[1].toLowerCase();
@@ -141,9 +142,9 @@ button.addEventListener('click', (e) => {
 
 // Pull news from The Guardian API
 
-const apiKey = "";
+const newsApiKey = "44b4bfb4-dc09-44b5-bf45-44f068057840";
 
-const newsUrl = `https://content.guardianapis.com/search?api-key=${apiKey}`;
+const newsUrl = `https://content.guardianapis.com/search?api-key=${newsApiKey}`;
 const gallery = document.getElementById('gallery');
 
 // Asynchronous function to get the JSON document from the url
