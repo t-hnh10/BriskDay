@@ -152,8 +152,9 @@ fetch(newsUrl).then(response => response.json())
 
 function showUsers(data) {
     data.response.results.forEach((index) => {
-        const news = document.createElement('p');
+        const news = document.createElement('li');
         news.textContent = index.webTitle;
+        news.className = "menu-list"
         gallery.appendChild(news);
     });
 }
