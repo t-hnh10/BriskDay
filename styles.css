@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|News+Cycle&display=swap');
 
 html {
     background: url('img/background.jpg');
@@ -17,4 +17,47 @@ span {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    font-family: 'News Cycle', sans-serif;
+    font-size: large;
+}
+
+/* Heading Special Effects */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* Set elements as invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* Call keyframe, use animation and repeat it once */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* Ensures we remain at last keyframe after animation */
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	animation-duration:3s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.8s;
+-moz-animation-delay: 0.8s;
+animation-delay: 0.8s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay:1.6s;
+animation-delay: 1.6s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 2.2s;
+-moz-animation-delay: 2.2s;
+animation-delay: 2.2s;
 }
